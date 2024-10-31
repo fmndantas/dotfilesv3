@@ -152,5 +152,13 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
-exec_always --no-startup-id "bash ~/.config/i3/polybar.sh"
+gaps inner 10px
+gaps outer 5px
+
 exec --no-startup-id "bash ~/.config/i3/dpi.sh"
+exec_always --no-startup-id "bash ~/.config/i3/polybar.sh"
+
+workspace 1 output HDMI-1
+
+exec --no-startup-id flameshot
+bindsym --release Print exec "flameshot gui"

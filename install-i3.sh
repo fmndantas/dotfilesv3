@@ -1,2 +1,2 @@
-sudo apt install i3 i3lock polybar
+sudo apt install i3 i3lock polybar arandr flameshot
 
