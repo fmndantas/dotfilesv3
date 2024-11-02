@@ -13,4 +13,10 @@ vim.opt.softtabstop = 2    -- Number of spaces that a <Tab> counts for while edi
 vim.opt.shiftwidth = 2      -- Number of spaces to use for each step of (auto)indent
 vim.opt.expandtab = true  
 
+-- pesquisa
+vim.opt.incsearch=true
+vim.opt.ignorecase=true
+vim.opt.smartcase=true
+
+-- tema
 vim.cmd[[colorscheme monokai-pro]]
