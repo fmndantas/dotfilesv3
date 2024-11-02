@@ -1,5 +1,6 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
+local builtin = require('telescope.builtin')
 
 -- navegação entre panels
 map('n', '<C-h>', '<C-w>h', opts)
@@ -29,6 +30,7 @@ map('n', 'K', vim.lsp.buf.hover, { desc = 'Hover' })
 map('n', '<Leader>lr', vim.lsp.buf.rename, { desc = 'Rename' })
 map('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to definition' })
 map('n', '<Leader>la', vim.lsp.buf.code_action, { desc = 'Code actions' })
+map('n', '<Leader>ls', builtin.lsp_document_symbols, { desc = 'Code symbols' })
 
 -- tabs
 map('n', '{', '<Cmd>BufferPrevious<CR>', { desc = 'Prev buffer', unpack(opts) })
