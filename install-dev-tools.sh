@@ -7,8 +7,10 @@ sudo ln -s /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
 
 # .net 8.0
 sudo apt install dotnet-sdk-8.0
+# NOTE: fsharp and csharp in neovim
 dotnet tool install --global fsautocomplete
 dotnet tool install --global csharp-ls
+dotnet tool install --global fantomas
 
 # jetbrains nerd font
 wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip"
@@ -51,3 +53,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
+
+# python3
+sudo apt install python3.12-venv
+
+# postman
+sudo snap install postman
