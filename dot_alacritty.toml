@@ -1,6 +1,9 @@
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-size = 10
+size = 9.5
 
 [env]
 EDITOR = "nvim"
+
+[window]
+opacity = 0.85
