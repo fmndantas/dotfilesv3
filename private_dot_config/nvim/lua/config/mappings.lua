@@ -18,15 +18,15 @@ map('n', '_', '<C-w>s', { desc = 'Split vertically', unpack(opts) })
 map('i', 'jj', '<esc>', { desc = 'Easy exit', unpack(opts) })
 
 -- nvim-tree
-map('n', '<Leader>e', ':NvimTreeToggle<CR>', { desc = 'Toggle tree', unpack(opts) })
+map('n', '<Leader>e', '<Cmd>NvimTreeToggle<CR>', { desc = 'Toggle tree', unpack(opts) })
 
 -- telescope
-map('n', '<Leader>ff', ':Telescope find_files<CR>', { desc = 'Find files', unpack(opts) })
-map('n', '<Leader>fh', ':Telescope command_history<CR>', { desc = 'Search command history', unpack(opts) })
-map('n', '<Leader>/', ':Telescope live_grep<CR>', { desc = 'GREP!', unpack(opts) })
-map('n', '<Leader>fb', ':Telescope buffers<CR>', { desc = 'Find buffers', unpack(opts) })
-map('n', '<Leader>fd', ':Telescope diagnostics<CR>', { desc = 'Find diagnostics', unpack(opts) })
-map('n', '<Leader>ft', ':TodoTelescope<CR>', { desc = 'Find todos', unpack(opts) })
+map('n', '<Leader>ff', '<Cmd>Telescope find_files<CR>', { desc = 'Find files', unpack(opts) })
+map('n', '<Leader>fh', '<CMD>Telescope command_history<CR>', { desc = 'Search command history', unpack(opts) })
+map('n', '<Leader>/', '<CMD>Telescope live_grep<CR>', { desc = 'GREP!', unpack(opts) })
+map('n', '<Leader>fb', '<CMD>Telescope buffers<CR>', { desc = 'Find buffers', unpack(opts) })
+map('n', '<Leader>fd', '<CMD>Telescope diagnostics<CR>', { desc = 'Find diagnostics', unpack(opts) })
+map('n', '<Leader>ft', '<CMD>TodoTelescope<CR>', { desc = 'Find todos', unpack(opts) })
 
 -- lsp
 map('n', '<Leader>lf', vim.lsp.buf.format, { desc = 'Format file' })
@@ -46,3 +46,7 @@ map('n', '<Leader>bx', '<Cmd>BufferCloseAllButVisible<CR>', { desc = 'Close all 
 
 -- lazygit
 map('n', '<leader>gg', '<Cmd>LazyGit<CR>', { desc = 'LazyGit', unpack(opts) })
+
+-- maximização
+map('n', '<leader>m', '<Cmd>Maximize<CR>', { desc = 'Maximizar', unpack(opts) })
+
