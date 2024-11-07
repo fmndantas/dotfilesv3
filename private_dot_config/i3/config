@@ -29,6 +29,7 @@ floating_modifier $mod
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec alacritty
+# bindsym $mod+Shift+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -157,19 +158,44 @@ exec_always --no-startup-id "bash ~/.config/i3/polybar.sh"
 
 exec_always bash ~/.screenlayout/casa_duas_telas.sh
 
-set $primary primary
+set $primary HDMI-1
 set $secondary eDP-1
 
-workspace 1 output primary
-workspace 2 output secondary
-workspace 3 output primary
-workspace 4 output secondary
-workspace 5 output secondary
-workspace 6 output secondary
-workspace 7 output secondary
-workspace 8 output secondary
-workspace 9 output secondary
-workspace 10 output secondary
+workspace 1 output $primary
+workspace 2 output $secondary
+workspace 3 output $primary
+workspace 4 output $secondary
+workspace 5 output $secondary
+workspace 6 output $secondary
+workspace 7 output $secondary
+workspace 8 output $secondary
+workspace 9 output $secondary
+workspace 10 output $secondary
 
 exec --no-startup-id flameshot
 bindsym --release Print exec "flameshot gui"
+
+# set $primary #FFE7B8
+set $primary #000099
+set $marromClaro #282A2E
+set $marromEscuro #43474F
+set $amarelo #8C7443
+set $white #FFFFFF
+set $black #000000
+
+# class                 border      backgr. text    indicator child_border
+client.focused          $amarelo $amarelo $black #2e9ef4   $amarelo
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        $marromClaro $marromClaro #636363 #292d2e   $marromClaro
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+default_border pixel 0
+
+title_align center
+
+exec --no-startup-id feh --bg-scale ~/vortice.png
+
+exec --no-startup-id picom
