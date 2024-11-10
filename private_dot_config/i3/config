@@ -37,6 +37,8 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
 bindsym $mod+d exec rofi -show combi
+bindsym $mod+Shift+w exec bash ~/.config/rofi/workspaces.sh
+bindsym $mod+m exec bash ~/.config/rofi/search.sh
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -150,32 +152,37 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 gaps inner 10px
-gaps outer 5px
+gaps outer 0px
 
 exec --no-startup-id "bash ~/.config/i3/dpi.sh"
 
-exec_always --no-startup-id "bash ~/.config/i3/polybar.sh"
+exec --no-startup-id "bash ~/.config/i3/polybar.sh"
 
-exec_always bash ~/.screenlayout/casa_duas_telas.sh
+exec --no-startup-id "bash ~/.config/i3/workspaces.sh"
 
-set $primary HDMI-1
-set $secondary eDP-1
+exec --no-startup-id feh --bg-scale ~/.wallpaper.png
 
-workspace 1 output $primary
-workspace 2 output $secondary
-workspace 3 output $primary
-workspace 4 output $secondary
-workspace 5 output $secondary
-workspace 6 output $secondary
-workspace 7 output $secondary
-workspace 8 output $secondary
-workspace 9 output $secondary
-workspace 10 output $secondary
+exec --no-startup-id picom
 
 exec --no-startup-id flameshot
 bindsym --release Print exec "flameshot gui"
 
-# set $primary #FFE7B8
+# TODO:
+# exec_always bash ~/.screenlayout/casa_duas_telas.sh
+# exec_always bash ~/.screenlayout/uma_tela.sh
+# set $primary "HDMI-1"
+# set $secondary "eDP-1"
+# workspace 1 output $primary
+# workspace 2 output $secondary
+# workspace 3 output $primary
+# workspace 4 output $secondary
+# workspace 5 output $secondary
+# workspace 6 output $secondary
+# workspace 7 output $secondary
+# workspace 8 output $secondary
+# workspace 9 output $secondary
+# workspace 10 output $secondary
+
 set $primary #000099
 set $marromClaro #282A2E
 set $marromEscuro #43474F
@@ -192,10 +199,6 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-default_border pixel 0
+default_border pixel 2
 
 title_align center
-
-exec --no-startup-id feh --bg-scale ~/vortice.png
-
-exec --no-startup-id picom
