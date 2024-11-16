@@ -1,5 +1,5 @@
 # NOTE: i3
-sudo apt install i3 i3lock polybar arandr flameshot feh picom
+sudo apt install i3 i3lock polybar arandr flameshot feh picom rofi tmux mpv build-essential
 
 # NOTE: para brilho do polybar funcionar
 # WARN: desabilitado por enquanto
