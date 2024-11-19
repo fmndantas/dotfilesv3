@@ -50,3 +50,6 @@ map('n', '<leader>gg', '<Cmd>LazyGit<CR>', { desc = 'LazyGit', unpack(opts) })
 -- maximização
 map('n', '<leader>m', '<Cmd>Maximize<CR>', { desc = 'Maximizar', unpack(opts) })
 
+map('n', '<space>d', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+
+
