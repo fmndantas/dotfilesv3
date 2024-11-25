@@ -156,20 +156,23 @@ gaps outer 0px
 
 exec --no-startup-id "bash ~/.config/i3/dpi.sh"
 
-exec --no-startup-id "bash ~/.config/i3/polybar.sh"
+# exec --no-startup-id "bash ~/.config/i3/polybar.sh"
 
 exec --no-startup-id "bash ~/.config/i3/workspaces.sh"
 
-exec --no-startup-id feh --bg-scale ~/.wallpaper.png
+exec --no-startup-id "bash ~/.config/i3/set-wallpaper.sh"
 
-exec --no-startup-id picom
+# exec --no-startup-id picom
 
 exec --no-startup-id flameshot
 bindsym --release Print exec "flameshot gui"
 
-# TODO:
-# exec_always bash ~/.screenlayout/casa_duas_telas.sh
-# exec_always bash ~/.screenlayout/uma_tela.sh
+bindsym XF86AudioRaiseVolume exec 'amixer -q sset Master,0 1+ unmute'
+bindsym XF86AudioLowerVolume exec 'amixer -q sset Master,0 1- unmute'
+bindsym XF86AudioMute exec 'amixer -q sset Master,0 toggle'
+
+# bindsym $mod+L i3lock
+
 # set $primary "HDMI-1"
 # set $secondary "eDP-1"
 # workspace 1 output $primary
@@ -202,3 +205,10 @@ client.background       #ffffff
 default_border pixel 2
 
 title_align center
+
+bar {
+      status_command i3status
+      font pango:DejaVu Sans Mono 10
+    	position bottom
+}
+
