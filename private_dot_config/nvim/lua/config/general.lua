@@ -19,4 +19,4 @@ vim.opt.ignorecase=true
 vim.opt.smartcase=true
 
 -- tema
-vim.cmd[[colorscheme monokai-pro-classic]]
+vim.cmd[[colorscheme monokai-pro-machine]]
