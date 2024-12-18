@@ -162,7 +162,7 @@ exec --no-startup-id "bash ~/.config/i3/workspaces.sh"
 
 exec --no-startup-id "bash ~/.config/i3/set-wallpaper.sh"
 
-# exec --no-startup-id picom
+exec --no-startup-id picom
 
 exec --no-startup-id flameshot
 bindsym --release Print exec "flameshot gui"
