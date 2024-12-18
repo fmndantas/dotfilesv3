@@ -185,6 +185,7 @@ bindsym XF86AudioMute exec 'amixer -q sset Master,0 toggle'
 # workspace 8 output $secondary
 # workspace 9 output $secondary
 # workspace 10 output $secondary
+bindsym F12 exec "bash ~/.config/i3/quake.sh"
 
 set $primary #000099
 set $marromClaro #282A2E
@@ -212,3 +213,4 @@ bar {
     	position bottom
 }
 
+for_window [class="quake-term"] floating enable
