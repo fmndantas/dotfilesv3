@@ -167,9 +167,9 @@ exec --no-startup-id picom
 exec --no-startup-id flameshot
 bindsym --release Print exec "flameshot gui"
 
-bindsym XF86AudioRaiseVolume exec 'amixer -q sset Master,0 1+ unmute'
-bindsym XF86AudioLowerVolume exec 'amixer -q sset Master,0 1- unmute'
-bindsym XF86AudioMute exec 'amixer -q sset Master,0 toggle'
+bindsym XF86AudioRaiseVolume exec "amixer -M sset Master,0 5%+"
+bindsym XF86AudioLowerVolume exec "amixer -M sset Master,0 5%-"
+bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
 # bindsym $mod+L i3lock
 
