@@ -11,6 +11,12 @@ return {
       -- animation = true,
       -- insert_at_start = true,
       -- …etc.
+      maximum_padding = 0,
+      maximum_length = 0,
+      highlight_visible = true,
+      icons = {
+          preset = 'powerline'
+      }
     },
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },
