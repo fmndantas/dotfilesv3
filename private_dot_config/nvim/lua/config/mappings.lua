@@ -43,6 +43,7 @@ map('n', '}', '<Cmd>BufferNext<CR>', { desc = 'Next buffer', unpack(opts) })
 map('n', '<Leader>bp', '<Cmd>BufferPick<CR>', { desc = 'Pick buffer', unpack(opts) } )
 map('n', '<Leader>bc', '<Cmd>BufferClose<CR>', { desc = 'Close buffer', unpack(opts) } )
 map('n', '<Leader>bx', '<Cmd>BufferCloseAllButVisible<CR>', { desc = 'Close all buffer but visible', unpack(opts) } )
+map('n', '<Leader>bi', '<Cmd>BufferPin<CR>', { desc = 'Pin buffer', unpack(opts) } )
 
 -- lazygit
 map('n', '<leader>gg', '<Cmd>LazyGit<CR>', { desc = 'LazyGit', unpack(opts) })
