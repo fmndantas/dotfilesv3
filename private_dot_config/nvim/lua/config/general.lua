@@ -8,9 +8,9 @@ vim.opt.number=true
 vim.opt.relativenumber=true
 
 -- tab
-vim.opt.tabstop = 2        -- Number of visual spaces per TAB
-vim.opt.softtabstop = 2    -- Number of spaces that a <Tab> counts for while editing
-vim.opt.shiftwidth = 2      -- Number of spaces to use for each step of (auto)indent
+vim.opt.tabstop = 4        -- Number of visual spaces per TAB
+vim.opt.softtabstop = 4    -- Number of spaces that a <Tab> counts for while editing
+vim.opt.shiftwidth = 4      -- Number of spaces to use for each step of (auto)indent
 vim.opt.expandtab = true  
 
 -- pesquisa
@@ -20,3 +20,6 @@ vim.opt.smartcase=true
 
 -- tema
 vim.cmd[[colorscheme monokai-pro-octagon]]
+
+-- line highlighting
+vim.o.cursorline = true
