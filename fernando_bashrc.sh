@@ -14,3 +14,11 @@ alias dwr='dotnet watch run'
 alias dcdb='dotnet clean && dotnet build'
 
 alias ..='cd ..'
+
+dt-spec () {
+    dotnet test --filter "fullyqualifiedname~$1"
+}
+
+dwt-spec () {
+    dotnet watch test --filter "fullyqualifiedname~$1"
+}
