@@ -1,0 +1,10 @@
+#!/bin/bash
+
+source=/home/fernando/.cp/template
+where=$(pwd)
+cp -r $source $where
+if [ -z $1 ]; then
+	echo "Erro! Digite o nome do problema" 1>&2
+	exit 64
+fi
+mv $where/template $where/$1
