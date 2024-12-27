@@ -36,6 +36,7 @@ map('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to definition' })
 map('n', '<Leader>la', vim.lsp.buf.code_action, { desc = 'Code actions' })
 map('n', '<Leader>ls', builtin.lsp_document_symbols, { desc = 'Code symbols' })
 map('n', '<Leader>lt', vim.lsp.buf.references, { desc = 'References' })
+map('n', '<Leader>li', vim.lsp.buf.implementation, { desc = 'Implementations' })
 
 -- buffers
 map('n', '{', '<Cmd>BufferPrevious<CR>', { desc = 'Prev buffer', unpack(opts) })
