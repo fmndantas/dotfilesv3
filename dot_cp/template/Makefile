@@ -1,9 +1,8 @@
 COMPILER = g++
 FLAGS = -std=c++17 -Wshadow -Wall -O2 -Wno-unused-result -g -ggdb3 -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_DEBUG -fmax-errors=50
-INPUT = ./input
 
 r: sol.out
-	./sol.out < ${INPUT}
+	bash ./run.sh
 
 m: sol.out
 	bash ./wait.sh

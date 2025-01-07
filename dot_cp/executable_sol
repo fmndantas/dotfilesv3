@@ -1,10 +1,10 @@
 #!/bin/bash
 
-source=/home/fernando/.cp/template
-where=$(pwd)
-cp -r $source $where
+template_dir=/home/fernando/.cp/template
+to=$(pwd)
+cp -r $template_dir $to
 if [ -z $1 ]; then
 	echo "Erro! Digite o nome do problema" 1>&2
 	exit 64
 fi
-mv $where/template $where/$1
+mv $to/template $to/$1

@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define fori(start,end) for (int i = start; i < end; ++i)
 
 using namespace std;
 

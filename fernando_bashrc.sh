@@ -4,6 +4,7 @@ export DOTNET_ROOT=/opt/dotnet
 
 export PATH=$PATH:/home/fernando/.dotnet/tools
 export PATH=$PATH:/opt/dotnet
+export PATH=$PATH:/home/fernando/.cp
 
 alias dt='dotnet test'
 alias dwt='dotnet watch test'
