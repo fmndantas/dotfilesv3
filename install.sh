@@ -74,3 +74,8 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 sudo apt update
 sudo apt install google-chrome-stable -y
 # INFO: uninstall with sudo apt-get remove google-chrome-stable --auto-remove
+
+# NOTE: ruby e teamocil
+sudo apt install ruby-rubygems
+sudo gem install teamocil
+mkdir ~/.teamocil

@@ -1,0 +1,16 @@
+windows:
+  - name: nvim
+    root: ~/projetos/calculopv
+    panes:
+      - nvim
+  - name: cli
+    root: ~/projetos/calculopv
+    layout: even-horizontal
+    panes:
+      - commands:
+        - cd TestesDominio
+        - dotnet test
+      - commands:
+        - cd Api
+      - commands:
+        - cd Scheduler

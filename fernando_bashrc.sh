@@ -23,3 +23,4 @@ dt-spec () {
 dwt-spec () {
     dotnet watch test --filter "fullyqualifiedname~$1"
 }
+alias tms='teamocil'
