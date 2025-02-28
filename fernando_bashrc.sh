@@ -5,6 +5,7 @@ export DOTNET_ROOT=/opt/dotnet
 export PATH=$PATH:/home/fernando/.dotnet/tools
 export PATH=$PATH:/opt/dotnet
 export PATH=$PATH:/home/fernando/.cp
+export PATH=$PATH:/home/fernando/.cp-fsharp
 
 alias dt='dotnet test'
 alias dwt='dotnet watch test'
@@ -16,6 +17,8 @@ alias dcdb='dotnet clean && dotnet build'
 
 alias ..='cd ..'
 
+alias mk='make'
+
 dt-spec () {
     dotnet test --filter "fullyqualifiedname~$1"
 }
@@ -23,4 +26,7 @@ dt-spec () {
 dwt-spec () {
     dotnet watch test --filter "fullyqualifiedname~$1"
 }
-alias tms='teamocil'
+
+sessao_tmux () {
+    teamocil --here $1
+}
