@@ -27,6 +27,7 @@ map('n', '<Leader>/', '<CMD>Telescope live_grep<CR>', { desc = 'GREP!', unpack(o
 map('n', '<Leader>fb', '<CMD>Telescope buffers<CR>', { desc = 'Find buffers', unpack(opts) })
 map('n', '<Leader>fd', '<CMD>Telescope diagnostics<CR>', { desc = 'Find diagnostics', unpack(opts) })
 map('n', '<Leader>ft', '<CMD>TodoTelescope<CR>', { desc = 'Find todos', unpack(opts) })
+map('n', '<Leader>fm', '<CMD>Telescope marks<CR>', { desc = 'Find marks', unpack(opts) })
 
 -- lsp
 map('n', '<Leader>lf', vim.lsp.buf.format, { desc = 'Format file' })
@@ -35,8 +36,9 @@ map('n', '<Leader>lr', vim.lsp.buf.rename, { desc = 'Rename' })
 map('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to definition' })
 map('n', '<Leader>la', vim.lsp.buf.code_action, { desc = 'Code actions' })
 map('n', '<Leader>ls', builtin.lsp_document_symbols, { desc = 'Code symbols' })
-map('n', '<Leader>lt', vim.lsp.buf.references, { desc = 'References' })
+map('n', '<Leader>lt', builtin.lsp_references, { desc = 'References' })
 map('n', '<Leader>li', vim.lsp.buf.implementation, { desc = 'Implementations' })
+map('n', '<Leader>lh', vim.lsp.buf.document_highlight, { desc = 'Highlight symbol' })
 
 -- buffers
 map('n', '{', '<Cmd>BufferPrevious<CR>', { desc = 'Prev buffer', unpack(opts) })
