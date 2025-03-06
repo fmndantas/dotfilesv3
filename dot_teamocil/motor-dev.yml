@@ -1,0 +1,8 @@
+name:
+  motor-nvim
+windows:
+  - name: nvim
+    root: ~/projetos/calculopv
+    layout: even-horizontal
+    panes:
+      - nvim

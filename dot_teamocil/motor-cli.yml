@@ -1,0 +1,11 @@
+name:
+  motor-cli
+windows:
+  - name: cli
+    root: ~/projetos/calculopv
+    layout: even-horizontal
+    panes:
+      - commands:
+        - docker restart banco_sapv_local
+        - cd TestesDominio
+        - dt
