@@ -31,6 +31,10 @@ return
         },
         completion = {
           always = true,
+        },
+        clients = {
+            lsp = { enabled = true },
+            buffers = { enabled = false }
         }
       }
   end,
