@@ -23,3 +23,6 @@ vim.cmd[[colorscheme monokai-pro-octagon]]
 
 -- line highlighting
 vim.o.cursorline = true
+
+-- folding
+vim.opt.foldmethod='indent'
